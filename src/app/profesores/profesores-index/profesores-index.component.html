@@ -1,0 +1,29 @@
+<div class="row"></div>
+<div class="col">
+    
+    <button class="btn btn-danger"  (click)="new()" >crear especialidad </button>
+</div>
+<div>
+    
+</div>
+<table [border]="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>apellido</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let especialidad of listprofesor">
+        <th>{{especialidad.id}}</th>
+        <th>{{especialidad.nombre}}</th>
+        <th>
+            <button class="btn btn-warning btn-sm btn-outline-primary" (click)="edit(especialidad.id)"> modificar</button>
+            <button class="btn btn-danger btn-sm" (click)="delete(especialidad.id)">eliminar</button>
+        </th>
+        </tr>
+
+    </tbody>
+</table>
